@@ -156,6 +156,19 @@ def server(input, output, session):
     @render.download(filename="filtered_penguins.csv")
     def download_data():
         yield filtered_data().to_csv(index=False)
+        
+    # --------------------------------------------------------
+# Reactive calculations and effects
+# --------------------------------------------------------
+
+# Add a reactive calculation to filter the data
+# By decorating the function with @reactive, we can use the function to filter the data
+# The function will be called whenever an input functions used to generate that output changes.
+# Any output that depends on the reactive function (e.g., filtered_data()) will be updated when the data changes.
+
+@reactive.calc
+def filtered_data():
+    return penguins
 
 app = App(app_ui, server)
 
