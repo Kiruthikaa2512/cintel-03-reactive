@@ -37,7 +37,7 @@ app_ui = ui.page_sidebar(
         ),
 
         ui.hr(),
-        ui.a("GitHub", href="https://github.com/Kiruthikaa2512/cintel-02-data", target="_blank")
+        ui.a("GitHub", href="https://github.com/Kiruthikaa2512/cintel-03-reactive", target="_blank")
     ),
 
     ui.markdown("**Instructions:** Use filters and dropdowns to explore the data visually."),
